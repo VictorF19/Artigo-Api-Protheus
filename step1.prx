@@ -1,0 +1,18 @@
+#INCLUDE "TOTVS.CH"
+#INCLUDE "RESTFUL.CH"
+#INCLUDE "PROTHEUS.CH"
+#INCLUDE "TBICONN.CH"
+
+User Function apiProducts()
+
+Return
+
+WSRESTFUL Products DESCRIPTION "Products REST API"
+
+    WSMETHOD GET DESCRIPTION "Get list of Products" WSSYNTAX "/Products/"
+
+END WSRESTFUL 
+
+WSMETHOD GET WSRECEIVE offset, limit WSSERVICE Products 
+    
+Return 
